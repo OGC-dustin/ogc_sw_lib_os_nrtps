@@ -1,6 +1,6 @@
-# lib_os_nrtps
-OGC Engineering
-Non Real-Time Polled Scheduler ( NRTPS )
+# OGC.Engineering
+## ogc-lib-os-nrtps - Non Real-Time Polled Scheduler ( NRTPS )
+Developer contact - dustin < at > ogc.engineering
 
 * small footprint
     Core logic      ( 438 Bytes )

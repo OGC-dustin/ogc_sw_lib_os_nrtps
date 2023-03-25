@@ -5,7 +5,7 @@
  */
 
 #include "app.h"
-#include "lib_os_nrtps.h"
+#include "ogc-lib-os-nrtps.h"
 #include "hal.h"
 
 int main( void )
