@@ -1,21 +1,22 @@
 /*
  * OGC Engineering
- * Non Real-Timed Polled Scheduler ( NRTPS )
- * library
+ *   Library
+ *     Operating System
+ *       Non Real-Timed Polled Scheduler ( NRTPS )
  */
 
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "ogc-lib-os-nrtps.h"
+#include "ogc_lib_os_nrtps.h"
 #include "hal.h"
 
 /* =====================================================================================================================
  *                                                                                            PRIVATE GLOBAL EVENT ARRAY
  * =====================================================================================================================
  */
-volatile struct s_lib_os_nrtps_event
+volatile struct s_ogc_lib_os_nrtps_event
 event_array[ LIB_OS_NRTPS__EVENT_ARRAY_SIZE ] =
     { enum_LIB_OS_NRTPS_EVENT__EMPTY, 0U, NULL, NULL };
 
@@ -25,7 +26,7 @@ event_array[ LIB_OS_NRTPS__EVENT_ARRAY_SIZE ] =
  */
 /*                                                                         INIT function to clear status/KPI tracking */
 void
-lib_os_nrtps_init(
+ogc_lib_os_nrtps_init(
     void
     )
 {
@@ -41,8 +42,8 @@ lib_os_nrtps_init(
 }
 
 /*                                                                           SET a new scheduled event into the array */
-enum e_lib_os_nrtps_status
-lib_os_nrtps_set(
+enum e_ogc_lib_os_nrtps_status
+ogc_lib_os_nrtps_set(
     uint64_t task_period_tick,
     void( *function )( void* ),
     void* arguments
@@ -71,8 +72,8 @@ lib_os_nrtps_set(
 }
 
 /*                                         CLEAR for those times a scheduled event needs to be removed from the array */
-enum e_lib_os_nrtps_status
-lib_os_nrtps_clear(
+enum e_ogc_lib_os_nrtps_status
+ogc_lib_os_nrtps_clear(
     void( *function )( void* ),
     void* arguments
     )
@@ -106,7 +107,7 @@ lib_os_nrtps_clear(
 
 /*                                                                            START scheduler loop, should never exit */
 void
-lib_os_nrtps_start(
+ogc_lib_os_nrtps_start(
     void
     )
 {
@@ -135,7 +136,7 @@ lib_os_nrtps_start(
 
 /*                                                                                  END catch if scheduler ever exits */
 void
-lib_os_nrtps_end(
+ogc_lib_os_nrtps_end(
     void
     )
 {
@@ -159,7 +160,7 @@ void test_function( void* arguments )
     }
 }
 
-bool run_unit_tests__lib_os_nrtps( void )
+bool run_unit_tests__ogc_lib_os_nrtps( void )
 {
     /*                                     alter the event array, run init and see if everything clears appropriately */
     uint8_t test_index = 0U;
