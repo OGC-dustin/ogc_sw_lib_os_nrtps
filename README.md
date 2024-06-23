@@ -17,7 +17,6 @@ Developer contact - dustin ( at ) ogc.engineering
     - Tasks MUST yield for other tasks to be able to operate
 ```
 
-
 ## Requirements:
 * the DEPLOYMENT/PROJECT layer(folder) must contain:
     * app.h header that redirects to the primary application ( because multiple applications are possible )
