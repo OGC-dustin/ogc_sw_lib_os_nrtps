@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "ogc_lib_os_nrtps.h"
+#include "ogc_sw_lib_os_nrtps.h"
 #include "hal.h"
 
 /* =====================================================================================================================
