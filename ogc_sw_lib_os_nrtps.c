@@ -1,9 +1,9 @@
 /*
  * OGC Engineering
- *   Software
- *     Library
- *       Operating System
- *         Non Real-Timed Polled Scheduler ( NRTPS )
+ * ogc_sw_lib_os_nrtps.c
+ * developer contact - dustin ( at ) ogc.engineering
+ *
+ * Non Real-Timed Polled Scheduler ( NRTPS )
  */
 
 #include <stdlib.h>
